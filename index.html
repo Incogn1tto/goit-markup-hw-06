@@ -357,7 +357,7 @@
         </div>
 
         
-        <form action="">
+        <form>
           <p class="ftr-form-title">Підпишіться на розсилку</p>
           <div class="ftr-form">
             <input class="ftr-form-input" type="email" name="user-email" id="e-mail" placeholder="E-mail">
@@ -382,14 +382,14 @@
 
         <!-- modal form -->
 
-        <form action="" class="modal-form">
+        <form class="modal-form">
 
           <p class="form-title">Залиште свої дані, ми вам передзвонимо</p>
           <div class="form-group">
 
             <label class="form-field">
               <span class="input-label">Ім'я</span>
-              <input type="text" class="input-field" autocomplete="name">
+              <input type="text" class="input-field" name="user-name" autocomplete="name">
               <svg class="input-icon" width="18px" height="18px">
                 <use href="./images/icons.svg#person"></use>
               </svg>
@@ -398,25 +398,23 @@
 
             <label class="form-field">
               <span class="input-label">Телефон</span>
-              <input type="tel" class="input-field" autocomplete="tel">
+              <input type="tel" class="input-field" name="user-phone" autocomplete="tel">
               <svg class="input-icon" width="18px" height="18px">
                 <use href="./images/icons.svg#phone-black"></use>
               </svg>
             </label>
-            
 
             <label class="form-field">
               <span class="input-label">Пошта</span>
-              <input type="email" class="input-field" autocomplete="email">
+              <input type="email" class="input-field" name="user-email" autocomplete="email">
               <svg class="input-icon" width="18px" height="18px">
                 <use href="./images/icons.svg#formmail"></use>
               </svg>
             </label>
-            
 
             <label class="form-field">
               <span class="input-label">Коментар</span>
-              <textarea class="input-comment" name="comment" id="" cols="30"  placeholder="Введіть текст"></textarea>
+              <textarea class="input-comment" name="user-comment" cols="30"  placeholder="Введіть текст"></textarea>
             </label>
             
             <!-- <div class="checkbox">
@@ -426,10 +424,10 @@
 
             <label class="checkbox">
               <input class="checkbox-icon" type="checkbox" name="user-agreement">
-              <p class="agreement">
-                Погоджуюся з розсилкою та приймаю 
+              <span class="agreement">
+                Погоджуюся з розсилкою та приймаю
                 <a class="agreement-link" href="" target="_blank" rel="noopener noreferrer nofollow">Умови договору</a>
-              </p>
+              </span>
             </label>
 
             <button class="submit-btn" type="submit">Відправити</button>
