@@ -619,6 +619,85 @@ display: flex;
   background-color: var(--accent-color);
 }
 
+/* footer form */
+
+.ftr-form-title {
+  margin-left: 93px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: var(--secondary-color);
+}
+
+.ftr-form {
+  display: flex;
+  margin-left: 93px;
+  margin-top: 20px;
+}
+
+.ftr-form-input {
+  padding: 16px 15px;
+  margin-right: 12px;
+  width: 358px;
+  height: 50px;
+
+  background-color: transparent;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ftr-form-input:hover,
+.ftr-form-input:focus {
+  color: var(--secondary-color);
+  outline: transparent;
+  border-color: var(--accent-color);
+}
+
+
+.ftr-form-btn {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 200px;
+  border-radius: 4px;
+  padding: 10px 28px;
+  align-items: center;
+  gap: 10px;
+  
+  color: var(--secondary-color);
+  background-color: var(--hero-button-bg-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  text-align: center;
+  
+  cursor: pointer;
+}
+
+.ftr-form-btn:hover,
+.ftr-form-btn:focus {
+  background-color: var(--accent-color);
+  border-color: transparent;
+}
+
+
 /* backdrop */
 
 .backdrop {
@@ -656,15 +735,16 @@ display: flex;
   border-radius: 4px;
 
   background-color: var(--secondary-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 
   z-index: 1000;
 
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(100%);
   transition: transform 250ms ease-in;
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, 80%);
+  transform: translate(-50%, -50%) scale(0%);
 }
 
 .modal-close-btn {
@@ -688,6 +768,210 @@ display: flex;
 
   cursor: pointer;
 }
+
+.close-btn {
+  fill: var(--primary-additional-color);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  fill: var(--accent-color);
+}
+
+/* modal form */
+
+.modal-form {
+  padding: 40px;
+}
+
+.form-title {
+  margin-bottom: 12px;
+  display: block;
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.input-label {
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: var(--secondary-additional-color);
+}
+
+.input-field {
+  padding: 12px 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  cursor: pointer;
+}
+
+.input-field:focus-visible {
+  outline: transparent;
+}
+
+.input-icon {
+  fill: currentColor;
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 12px;
+}
+
+.form-field:hover > .input-field,
+.form-field:focus-within > .input-field {
+    border-color: var(--accent-color);
+}
+
+.form-field:hover>.input-icon,
+.form-field:focus-within>.input-icon {
+  color: var(--accent-color);
+}
+
+/* .input-field:hover,
+.input-field:focus {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+} */
+
+
+
+.input-comment {
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  height: 120px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  cursor: pointer;
+  resize: none;
+}
+
+.input-comment:hover,
+.input-comment:focus {
+  border-color: var(--accent-color);
+  outline: transparent;
+}
+
+.input-comment::placeholder {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.checkbox-icon {
+  appearance: none;
+
+  width: 16px;
+  height: 15px;
+
+  border: 2px solid var(--primary-text-color);
+  border-radius: 2px;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='9' viewBox='0 0 42 32'%3E%3Ctitle%3Echecked%3C/title%3E%3Cpath fill='%23fff' stroke='%23fff' stroke-linejoin='miter' stroke-linecap='butt' stroke-miterlimit='4' stroke-width='0.64' d='M6.263 15.205l-0.22-0.21-3.307 3.132 11.651 11.114 24.477-23.351-3.285-3.134-21.192 20.197-8.124-7.75z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transition-property: background-color, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+
+  cursor: pointer;
+}
+
+.checkbox-icon:checked {
+  background-color: var(--accent-color);
+  border-color: transparent;
+}
+
+.agreement {
+  line-height: 1.71;
+  color: var(--secondary-additional-color);
+  user-select: none;
+}
+
+.agreement-link {
+  color: var(--accent-color);
+}
+
+.submit-btn {
+  display: block;
+  min-width: 200px;
+  border-radius: 4px;
+  padding: 10px 52px;
+  
+  color: var(--secondary-color);
+  background-color: var(--hero-button-bg-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  
+  cursor: pointer;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  background-color: var(--accent-color);
+  border-color: transparent;
+}
+
 
 /* portfolio styles */
 
