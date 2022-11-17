@@ -621,9 +621,11 @@ display: flex;
 
 /* footer form */
 
-.ftr-form-title {
-  margin-left: 93px;
+.ftr-form {
+  margin-left: auto;
+}
 
+.ftr-form-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -632,9 +634,8 @@ display: flex;
   color: var(--secondary-color);
 }
 
-.ftr-form {
+.ftr-form-field {
   display: flex;
-  margin-left: 93px;
   margin-top: 20px;
 }
 
@@ -816,6 +817,13 @@ display: flex;
   margin-bottom: 10px;
 }
 
+.form-field-comment {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
 .input-label {
   margin-bottom: 4px;
 
@@ -846,9 +854,12 @@ display: flex;
 .input-icon {
   fill: currentColor;
   position: absolute;
-  display: inline-block;
   top: 50%;
   left: 12px;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-field:hover > .input-field,
